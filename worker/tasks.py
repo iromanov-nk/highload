@@ -9,8 +9,8 @@ logger.setLevel('INFO')
 
 @task()
 def user_call(url, profile):
-    #logger.info('Start task')
+    logger.info('Start task')
     row = connection.UserVisit({'user_id': profile['user_id'], 'url': url})
     row.save()
-    #logger.info('Task end')
+    logger.info('Task end')
 
